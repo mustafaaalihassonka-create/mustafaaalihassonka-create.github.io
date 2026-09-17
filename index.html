@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080a0f">
+<title>مصطفى | أهلاً بك في عالم مصطفى</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+:root{--bg:#07090d;--text:#f7f7f5;--muted:#a4a8b2;--glass:rgba(255,255,255,.075);--line:rgba(255,255,255,.12);--gold:#e8b75b;--cyan:#55d6d0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Cairo,system-ui,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-5;background:
+radial-gradient(circle at 78% 12%,rgba(232,183,91,.16),transparent 22%),
+radial-gradient(circle at 15% 65%,rgba(85,214,208,.10),transparent 25%),
+linear-gradient(125deg,#07090d,#0d1118 55%,#080a0f)}
+.noise{position:fixed;inset:0;z-index:-1;opacity:.055;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{width:min(1060px,92vw);margin:auto;padding:28px 0 55px}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+.brand{font-weight:800;letter-spacing:.5px}.brand small{display:block;color:var(--muted);font-size:10px;font-weight:600}
+.dot{width:10px;height:10px;border-radius:50%;background:#55d6a0;box-shadow:0 0 18px #55d6a0;display:inline-block;margin-left:7px}
+.menu{border:1px solid var(--line);background:var(--glass);color:white;border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:18px;backdrop-filter:blur(14px)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center;min-height:620px}
+.copy{order:1}.photo-stage{order:2;position:relative;display:grid;place-items:center;min-height:570px;perspective:1200px}
+.kicker{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:13px}
+h1{font-size:clamp(42px,7vw,78px);line-height:1.04;margin:0 0 14px;letter-spacing:-2px}
+.lead{font-size:clamp(18px,2.4vw,26px);font-weight:700;margin:0 0 12px}
+.sub{color:var(--muted);font-size:14px;line-height:2;max-width:520px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:23px 0}
+.btn{border:1px solid var(--line);border-radius:14px;padding:11px 16px;background:var(--glass);color:#fff;text-decoration:none;font-size:12px;font-weight:700;backdrop-filter:blur(15px);transition:.25s}
+.btn.primary{background:linear-gradient(135deg,#e8b75b,#a87528);border-color:#e8b75b55;color:#15120b;box-shadow:0 10px 30px #e8b75b20}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 32px #0005}
+.orbit{position:absolute;width:470px;height:470px;border:1px solid #ffffff12;border-radius:50%;transform:rotateX(66deg) rotateZ(-18deg);box-shadow:0 0 80px #e8b75b12;animation:spin 18s linear infinite}
+.orbit:after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--gold);top:20px;left:50%;box-shadow:0 0 18px var(--gold)}
+@keyframes spin{to{transform:rotateX(66deg) rotateZ(342deg)}}
+.photo-frame{position:relative;width:min(370px,72vw);aspect-ratio:4/5;border-radius:32px;overflow:hidden;transform:rotateY(-7deg) rotateX(2deg);border:1px solid #ffffff22;box-shadow:25px 35px 80px #0009,0 0 70px #e8b75b16;transition:.35s;z-index:2}
+.photo-frame:hover{transform:rotateY(0) rotateX(0) translateY(-6px)}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.photo-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(5,7,10,.72));pointer-events:none}
+.hat{position:absolute;z-index:4;top:2px;right:50%;transform:translateX(50%) rotate(-2deg);width:185px;height:95px;pointer-events:none;filter:drop-shadow(0 13px 15px #0007)}
+.hat .crown{position:absolute;width:104px;height:64px;right:40px;top:4px;border-radius:48% 48% 38% 38%;background:linear-gradient(115deg,#f8d878,#bf8427 60%,#f1bf52);box-shadow:inset -8px -8px 14px #6b430b22}
+.hat .brim{position:absolute;width:185px;height:42px;right:0;top:51px;border-radius:50%;background:linear-gradient(100deg,#bd7e20,#f1c45f 46%,#c48728);box-shadow:inset 0 -6px 10px #6c410b25}
+.hat .band{position:absolute;right:40px;top:48px;width:105px;height:13px;background:#8c2c2c;border-radius:7px}
+.badge{position:absolute;bottom:25px;right:25px;z-index:5;padding:8px 11px;border-radius:12px;background:#0a0d12cc;border:1px solid #fff2;backdrop-filter:blur(12px);font-size:10px;color:#ddd}
+.social{padding-top:18px}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:17px}.section-head h2{font-size:25px;margin:0}.section-head span{color:var(--muted);font-size:11px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.social-card{position:relative;display:flex;align-items:center;gap:13px;min-height:88px;padding:14px;border:1px solid var(--line);background:linear-gradient(145deg,#ffffff0d,#ffffff04);border-radius:20px;text-decoration:none;color:white;overflow:hidden;backdrop-filter:blur(17px);transition:.28s;transform-style:preserve-3d}
+.social-card:before{content:"";position:absolute;width:120px;height:120px;right:-55px;top:-60px;background:var(--accent);opacity:.13;filter:blur(20px);border-radius:50%}
+.social-card:hover{transform:translateY(-5px) rotateX(2deg);border-color:#fff3;box-shadow:0 18px 45px #0006,0 0 35px color-mix(in srgb,var(--accent) 15%,transparent)}
+.logo{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;background:#fff;flex:none;box-shadow:0 8px 20px #0004;overflow:hidden}
+.logo img{width:32px;height:32px;object-fit:contain}.logo svg{width:31px;height:31px}
+.info{min-width:0;flex:1}.name{font-size:14px;font-weight:800}.handle{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}.chev{font-size:20px;color:#777f8b}
+.fb{--accent:#1877f2}.ig{--accent:#e1306c}.tt{--accent:#25f4ee}.tg{--accent:#229ed9}.tel{--accent:#7656ff}.wa{--accent:#25d366}
+.footer{margin-top:25px;text-align:center;color:#666d79;font-size:10px}.footer b{color:#a7adb8}
+.modal{position:fixed;inset:0;background:#0009;display:none;place-items:center;z-index:20;padding:20px}.modal.open{display:grid}.panel{width:min(420px,92vw);padding:23px;border-radius:24px;background:#11161e;border:1px solid #ffffff18;box-shadow:0 25px 80px #000b}.panel h3{margin:0 0 8px}.panel p{color:var(--muted);font-size:12px;line-height:1.8}.close{float:left;border:0;background:none;color:#fff;font-size:22px;cursor:pointer}
+@media(max-width:800px){.hero{grid-template-columns:1fr;gap:10px;min-height:auto}.copy{order:2;text-align:center}.sub{margin:auto}.actions{justify-content:center}.photo-stage{order:1;min-height:510px}.grid{grid-template-columns:1fr 1fr}.photo-frame{width:min(340px,76vw)}}
+@media(max-width:500px){.wrap{padding-top:18px}.grid{grid-template-columns:1fr}.photo-stage{min-height:455px}.orbit{width:380px;height:380px}.hat{transform:translateX(50%) scale(.88) rotate(-2deg)}h1{font-size:48px}}
+
+.top-actions{display:flex;align-items:center;gap:8px}.music{height:42px;border:1px solid var(--line);background:var(--glass);color:#fff;border-radius:999px;padding:0 14px;cursor:pointer;backdrop-filter:blur(14px);font-weight:700;font-family:inherit}.music span{font-size:10px;margin-right:5px}.music.playing{border-color:#e8b75b66;box-shadow:0 0 24px #e8b75b22;color:#f3cc78}.handmade{display:inline-flex;align-items:center;gap:7px;margin-top:8px;color:#8d94a0;font-size:10px;letter-spacing:.8px}.handmade i{display:block;width:26px;height:1px;background:#e8b75b77}
+.social-card{min-height:94px}.logo{background:transparent}.logo img{width:50px;height:50px}.photo-frame{box-shadow:25px 35px 80px #0009,0 0 70px #e8b75b16,0 0 0 1px #e8b75b10}.badge{letter-spacing:.4px}
+@media(max-width:500px){.music span{display:none}.music{width:42px;padding:0}.topbar{gap:10px}.brand{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="wrap">
+<header class="topbar">
+<div class="brand"><span class="dot"></span> MUSTAFA <small>MY DIGITAL WORLD</small></div>
+<div class="top-actions">
+<button class="music" id="musicBtn" onclick="toggleMusic()">♫ <span>موسيقى</span></button>
+<button class="menu" onclick="openModal()">☰</button>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="copy">
+<div class="kicker">WELCOME TO MY WORLD</div>
+<h1>مصطفى</h1>
+<p class="lead">أهلاً بك في عالم مصطفى</p>
+
+<div class="actions">
+<a class="btn primary" href="#social">استكشف حساباتي ↓</a>
+<button class="btn" onclick="share()">↗ مشاركة الموقع</button>
+</div><div class="handmade"><i></i> HANDCRAFTED FOR MUSTAFA <i></i></div>
+</div>
+
+<div class="photo-stage">
+<div class="orbit"></div>
+<div class="hat"><div class="crown"></div><div class="band"></div><div class="brim"></div></div>
+<div class="photo-frame">
+<img src="mustafa.jpg" alt="مصطفى">
+<div class="badge">ONLINE • 24/6</div>
+</div>
+</div>
+</section>
+
+<section class="social" id="social">
+<div class="section-head"><h2>حساباتي</h2><span>ALL MY LINKS • ONE PLACE</span></div>
+<div class="grid">
+<a class="social-card fb" href="https://www.facebook.com/share/1KvHNkxkWn/" target="_blank" rel="noopener">
+<div class="logo"><img src="facebook.svg" alt="Facebook"></div><div class="info"><div class="name">Facebook</div><div class="handle">صفحتي على فيسبوك</div></div><div class="chev">‹</div></a>
+
+<a class="social-card ig" href="https://www.instagram.com/0_5mu/" target="_blank" rel="noopener">
+<div class="logo"><img src="instagram.svg" alt="Instagram"></div><div class="info"><div class="name">Instagram</div><div class="handle">@0_5mu</div></div><div class="chev">‹</div></a>
+
+<a class="social-card tt" href="https://www.tiktok.com/@_mu_66?_r=1&_t=ZS-99oTvkc76aS" target="_blank" rel="noopener">
+<div class="logo"><img src="tiktok.svg" alt="TikTok"></div><div class="info"><div class="name">TikTok</div><div class="handle">@_mu_66</div></div><div class="chev">‹</div></a>
+
+<a class="social-card tg" href="https://t.me/soof0" target="_blank" rel="noopener">
+<div class="logo"><img src="telegram.svg" alt="Telegram"></div><div class="info"><div class="name">Telegram</div><div class="handle">@soof0</div></div><div class="chev">‹</div></a>
+
+<a class="social-card tel" href="https://tellonym.me/0_5mu/entertaining" target="_blank" rel="noopener">
+<div class="logo"><img src="tellonym.svg" alt="Tellonym"></div><div class="info"><div class="name">Tellonym</div><div class="handle">اسألني على Tellonym</div></div><div class="chev">‹</div></a>
+
+<a class="social-card wa" href="https://wa.me/9647800088386" target="_blank" rel="noopener">
+<div class="logo"><img src="whatsapp.svg" alt="WhatsApp"></div><div class="info"><div class="name">WhatsApp</div><div class="handle">964 780 008 8386</div></div><div class="chev">‹</div></a>
+</div>
+</section>
+</main>
+<footer class="footer">© <b>Mustafa</b> — أهلاً بك في عالمي الرقمي ✦ <span style="color:#e8b75b;margin-right:8px">• 8</span></footer>
+</div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+<div class="panel"><button class="close" onclick="closeModal()">×</button><h3>عن الموقع</h3><p>واجهة شخصية صممت خصيصاً لمصطفى، تجمع حساباته في تجربة واحدة بتصميم داكن، زجاجي و3D.</p><button class="btn primary" onclick="closeModal()">تمام</button></div>
+</div>
+<script>
+function openModal(){document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+async function share(){
+ if(navigator.share){try{await navigator.share({title:'مصطفى | عالمي الرقمي',text:'أهلاً بك في عالم مصطفى',url:location.href})}catch(e){}}
+ else{try{await navigator.clipboard.writeText(location.href);alert('تم نسخ رابط الموقع')}catch(e){alert('انسخ رابط الموقع من شريط المتصفح')}}
+}
+document.querySelectorAll('.social-card').forEach(c=>{
+ c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;c.style.transform=`perspective(700px) rotateY(${x/35}deg) rotateX(${-y/35}deg) translateY(-4px)`});
+ c.addEventListener('pointerleave',()=>c.style.transform='');
+});
+
+let audioCtx=null, master=null, musicTimer=null, playing=false;
+function tone(freq,start,dur,gain){
+ const o=audioCtx.createOscillator(), g=audioCtx.createGain();
+ o.type='sine';o.frequency.value=freq;g.gain.setValueAtTime(0,start);
+ g.gain.linearRampToValueAtTime(gain,start+.08);g.gain.exponentialRampToValueAtTime(.0001,start+dur);
+ o.connect(g);g.connect(master);o.start(start);o.stop(start+dur+.05);
+}
+function loopMusic(){
+ if(!playing)return;
+ const now=audioCtx.currentTime;
+ [261.63,329.63,392,523.25,392,329.63].forEach((f,i)=>tone(f,now+i*0.55,0.9,.035));
+ musicTimer=setTimeout(loopMusic,3300);
+}
+function toggleMusic(){
+ if(!audioCtx){audioCtx=new (window.AudioContext||window.webkitAudioContext)();master=audioCtx.createGain();master.gain.value=.55;master.connect(audioCtx.destination);}
+ if(audioCtx.state==='suspended') audioCtx.resume();
+ playing=!playing; document.getElementById('musicBtn').classList.toggle('playing',playing);
+ document.getElementById('musicBtn').querySelector('span').textContent=playing?'تشتغل':'موسيقى';
+ if(playing)loopMusic();else clearTimeout(musicTimer);
+}
+</script>
+</body>
+</html>
